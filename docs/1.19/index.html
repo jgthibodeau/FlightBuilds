@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Flight</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div style="float: left;width: 180px;">
+      General:
+      <ul style="padding-left: 15px;margin-top: 0px;">
+        <li>Space - Flap wings</li>
+        <li>Q - Breath fire</li>
+        <li>Arrows - Aim fire</li>
+        <li>E - Hold to pick up items</li>
+      </ul>
+
+      Ground:
+        <ul style="padding-left: 15px;margin-top: 0px;">
+        <li>WASD - Move</li>
+        <li>F - Attack</li>
+      </ul>
+
+      Flight:
+      <ul style="padding-left: 15px;margin-top: 0px;">
+        <li>W/S - Wings in/out - pitch</li>
+        <li>A/D - Roll</li>
+        <li>X - Boost (hold to boost more)</li>
+      </ul>
+
+      Flapping:
+      <ul style="padding-left: 15px;margin-top: 0px;">
+        <li>Space - Flap upward</li>
+        <li>Space + W - Flap forward</li>
+        <li>Space + S - Stop and hover</li>
+      </ul>
+    </div>
+
+    <div style="float: right;width: 180px;">
+      Tips:
+      <ul style="padding-left: 15px;margin-top: 0px;">
+        <li>After running for a while, you will pick up speed</li>
+        <li>You can aim your flame breath in the air, and on the ground</li>
+        <li>Hold down the boost button to keep your wings in and go further</li>
+        <li>You can only boost so many times before you need to recharge your stamina (feather icons)</li>
+        <li>Continious fire breathing will eventually decrease the size/distance of the flame. Wait some time for it to build back up (flame icon)</li>
+        <li>Flap forward to gain speed, and backward to stop and hover</li>
+        <li>Flapping upward from the ground initially is the best way to take flight</li>
+      </ul>
+    </div>
+
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Flight</div>
+      </div>
+    </div>
+  </body>
+</html>
